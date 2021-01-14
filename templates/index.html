@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<style>
+    a:link, a:visited {
+  background-color: #f44336;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  position:relative;
+  left:200px;
+}
+
+a:hover, a:active {
+  background-color: red;
+}
+</style>
+<body style="background-image: url('../static/bg1.jpg');">
+<img style="position:relative;left:430px;" src="../static/head.png" alt="not found"/>
+<div style="width:500px;position:absolute;left:430px;top:150px;padding:10px;height:350px;background-color:black;color:white;" >
+<h1 style="align:center;font-family:sans-serif;color:#881106;"><i>Comment classifier</i></h1>
+    <form action='/predict' method="POST">
+<label for="w3review"></label>
+<h4>Paste the comment in below text box and click on button detect</h4>
+        <textarea id="w3review" name="w3review" rows="4" cols="50">
+  </textarea>
+  <br><br>
+  <input type="submit" value="Detect" style="width:80px;height:40px;padding:3px;background-color:grey;color:white;"><br>
+        <br class="res" style="color:white">
+        {{pred}}<br>
+  <br>
+        <a href="https://cyberbaap.org/cyberbullying/reporting/" target="_blank">Report</a><br><br>
+</form>
+</div>
+
+</body>
+</html>
